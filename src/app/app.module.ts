@@ -6,10 +6,11 @@ import {AppComponent} from './app.component';
 
 import {IngredientService} from './services/ingredient.service';
 import {MealService} from './services/meal.service';
+import {OrderService} from './services/order.service';
 
-import { ChooseBurgerComponent } from './components/choose-burger/choose-burger.component';
-import { PrepareBurgerComponent } from './components/prepare-burger/prepare-burger.component';
-import { OrderBurgerComponent } from './components/order-burger/order-burger.component';
+import {ChooseBurgerComponent} from './components/choose-burger/choose-burger.component';
+import {PrepareBurgerComponent} from './components/prepare-burger/prepare-burger.component';
+import {OrderBurgerComponent} from './components/order-burger/order-burger.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { OrderBurgerComponent } from './components/order-burger/order-burger.com
     ],
     providers: [
         IngredientService,
-        MealService
+        MealService,
+        OrderService
     ],
     bootstrap: [AppComponent]
 })

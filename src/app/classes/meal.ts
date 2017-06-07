@@ -2,6 +2,8 @@ import {Ingredient} from "./ingredient";
 
 export class Meal {
 
+    id: number;
+
     name: string;
 
     ingredients: Ingredient[];
@@ -9,5 +11,5 @@ export class Meal {
     constructor() {
 
     }
-    
+
 }

@@ -1,6 +1,7 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {Ingredient} from "../../classes/ingredient";
 import {Meal} from "../../classes/meal";
+import {OrderService} from "../../services/order.service";
 
 @Component({
     selector: 'app-order-burger',
@@ -15,12 +16,16 @@ export class OrderBurgerComponent implements OnInit {
     @Input() selectedMeal: Meal[];
     @Output() selectedMealChange = new EventEmitter<Ingredient[]>();
 
-    constructor() {
+    constructor(private orderService: OrderService) {
     }
 
     clean(): void {
         this.selectedIngredientsChange.emit([]);
         this.selectedMealChange.emit(null);
+    }
+
+    check(): void {
+        this.orderService.check(this.selectedIngredients).then(meal => console.log(meal));
     }
 
     ngOnInit() {
