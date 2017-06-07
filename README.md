@@ -2,8 +2,11 @@
 
 # HOWTO
 
+#### SERVER
+[Snack Server](https://github.com/kaiocb/snack-server)
+
 #### REQUISITOS
-* node ao menos 6.9.x e npm 3.x.x
+* node mínimo: 6.9.x e npm 3.x.x
 
 #### INSTRUÇõES
 
@@ -11,6 +14,10 @@
 
 * `git clone https://github.com/kaiocb/snack-app.git`
 
-* run: `ng serve` disponível `http://localhost:4200/`
+* goto `cd snack-app`
+
+* prep: `npm install`
+
+* run: `ng serve --open` on: `http://localhost:4200/`
 
 * build: `ng build`
