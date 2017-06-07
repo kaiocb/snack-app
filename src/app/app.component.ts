@@ -9,6 +9,7 @@ import {Meal} from "./classes/meal";
 })
 export class AppComponent {
 
+    orderedMeal: Meal;
     selectedMeal: Meal;
     selectedIngredients: Ingredient[];
 
@@ -22,7 +23,7 @@ export class AppComponent {
 
     addMeal(meal: Meal): void {
         this.selectedMeal = meal;
-        (meal as any).ingredients.forEach(ingredient => this.addIngredient(ingredient));
+        meal.ingredients.forEach(ingredient => this.addIngredient(ingredient));
     }
 
 }

@@ -1,11 +1,10 @@
-export class Ingredient {
+export class Discount {
 
     id: number;
 
     name: string;
 
-    value: number;
-
     constructor() {
+
     }
 }

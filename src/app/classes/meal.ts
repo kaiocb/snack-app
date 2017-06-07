@@ -1,4 +1,5 @@
 import {Ingredient} from "./ingredient";
+import {Discount} from "./discount";
 
 export class Meal {
 
@@ -7,6 +8,10 @@ export class Meal {
     name: string;
 
     ingredients: Ingredient[];
+
+    discounts: Discount[];
+
+    price: number;
 
     constructor() {
 

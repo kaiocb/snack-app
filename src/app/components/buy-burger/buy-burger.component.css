@@ -1,0 +1,54 @@
+.cover {
+    height: 140px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
+}
+
+.buy-burger {
+    height: 260px;
+}
+
+.discounts {
+    width: 50%;
+    overflow: auto;
+    height: 160px;
+    float: left;
+}
+
+.price {
+    width: 50%;
+    float: right;
+}
+
+.buy-burger li {
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    border-radius: 4px;
+}
+
+.tip {
+    font-size: 10px;
+}
+
+button {
+    font-family: Arial;
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+}
+
+button.buy {
+    margin-top: 2px;
+    margin-right: .8em;
+    background-color: cornflowerblue !important;
+    color: white;
+}

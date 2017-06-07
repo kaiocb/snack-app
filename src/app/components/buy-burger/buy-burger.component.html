@@ -1,0 +1,28 @@
+<div class="buy-burger cover" *ngIf="orderedMeal">
+
+    <h2>
+        Finalize seu Pedido!
+    </h2>
+
+    <div class="discounts" *ngIf="orderedMeal.discounts.length > 0">
+        <h4>Você ganhou descontos!</h4>
+
+        <li *ngFor="let discount of orderedMeal.discounts">
+            <span>Desconto: {{discount.name}}</span><br/>
+            <span class="tip" *ngIf="discount.id == 1">Seu lanche parece light! 10% de desconto.</span>
+            <span class="tip" *ngIf="discount.id == 2">A cada três porções de carne, pague apenas duas.</span>
+            <span class="tip" *ngIf="discount.id == 3">A cada três porções de queijo, pague apenas duas.</span>
+        </li>
+
+    </div>
+
+    <div class="price">
+        <h3>Valor total: {{orderedMeal.price | currency:'BRL':true }}</h3>
+
+        <button class="buy"
+                (click)="buy(); $event.stopPropagation()"> PEDIR!
+        </button>
+
+    </div>
+
+</div>

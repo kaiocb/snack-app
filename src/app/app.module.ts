@@ -11,13 +11,15 @@ import {OrderService} from './services/order.service';
 import {ChooseBurgerComponent} from './components/choose-burger/choose-burger.component';
 import {PrepareBurgerComponent} from './components/prepare-burger/prepare-burger.component';
 import {OrderBurgerComponent} from './components/order-burger/order-burger.component';
+import { BuyBurgerComponent } from './components/buy-burger/buy-burger.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         ChooseBurgerComponent,
         PrepareBurgerComponent,
-        OrderBurgerComponent
+        OrderBurgerComponent,
+        BuyBurgerComponent
     ],
     imports: [
         BrowserModule,
