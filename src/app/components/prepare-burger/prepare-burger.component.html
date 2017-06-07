@@ -1,0 +1,15 @@
+<div class="prepare-burger cover">
+
+    <h2>
+        Monte ou dê um burst no seu Burger!
+    </h2>
+
+    <li *ngFor="let ingredient of ingredients" (click)="add(ingredient); $event.stopPropagation()">
+        <span>{{ingredient.name}}</span>
+        <span>{{ingredient.value | currency:'BRL':true }}</span>
+        <button class="add"
+                (click)="add(ingredient); $event.stopPropagation()"> +
+        </button>
+    </li>
+
+</div>

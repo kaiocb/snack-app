@@ -1,0 +1,14 @@
+<div class="choose-burger cover">
+
+    <h2>
+        Escolha opções prontas!
+    </h2>
+
+    <li *ngFor="let meal of meals" (click)="choose(meal); $event.stopPropagation()">
+        <span>{{meal.name}}</span>
+        <button class="add"
+                (click)="choose(meal); $event.stopPropagation()"> +
+        </button>
+    </li>
+
+</div>

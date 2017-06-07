@@ -1,0 +1,30 @@
+<div class="order-burger cover">
+
+    <h2>
+        {{selectedIngredients.length > 0?'Seu Snack Burger:':'Escolha ou monte seu Snack Burger!'}}
+    </h2>
+
+    <div *ngIf="selectedIngredients.length > 0 || selectedMeal">
+
+        <h3>
+            Burger: {{selectedMeal ? selectedMeal.name: 'Snack Burger Personalizado'}}
+        </h3>
+
+        <div class="ingredients">
+            <li *ngFor="let ingredient of selectedIngredients">
+                <span>{{ingredient.name}}</span>
+                <span>{{ingredient.value | currency:'BRL':true }}</span>
+            </li>
+        </div>
+
+        <button class="clean" (click)="clean();">
+            Limpar Pedido
+        </button>
+
+        <button class="order" (click)="order();">
+            Ver Preço
+        </button>
+
+    </div>
+
+</div>
